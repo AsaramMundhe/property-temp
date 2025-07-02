@@ -1,0 +1,66 @@
+Build a full-stack real estate listing website similar to housing.com or magicbricks.com, using the MERN stack (MongoDB, Express, React, Node.js).
+
+🧱 Functional Requirements:
+1. **Frontend (React):**
+   - Mobile-first, responsive UI using Tailwind CSS or Material-UI.
+   - Homepage with featured projects and search bar.
+   - Project Listing page with:
+     - Project title, location, price, builder name, status (ongoing, completed), and type (1BHK, 2BHK, etc.)
+     - Image gallery.
+     - "Show Interest" button.
+     - Virtual Tour iframe (embed 3D/360° VR tour using Matterport or YouTube iframe).
+   - Filters:
+     - Location, budget range, property type, possession status, amenities.
+   - Search Bar with autocomplete.
+   - Contact form per listing.
+   - SEO-friendly URLs (e.g., `/projects/mumbai/godrej-hills`).
+   - Meta tags for SEO (React Helmet).
+
+2. **Backend (Node.js + Express):**
+   - REST API for:
+     - CRUD for Projects (name, location, images, description, 360-tour link, etc.).
+     - Admin login/auth.
+     - Capture user interests (name, email, phone, message, selected project).
+   - JWT Auth for Admin.
+   - Rate limiting & security best practices (Helmet, CORS, express-validator).
+   - Email integration for interest alerts (use nodemailer or webhook).
+
+3. **Admin Panel (React route):**
+   - Admin Login.
+   - Dashboard with stats (# of projects, leads).
+   - Create/Update/Delete Projects with image upload.
+   - Manage user leads.
+
+4. **Database (MongoDB):**
+   - Collections: `projects`, `leads`, `admins`
+   - Use Mongoose for schema and validation.
+
+🛠️ Tech Stack:
+- React (Frontend)
+- Express + Node.js (Backend API)
+- MongoDB with Mongoose (Database)
+- Tailwind or MUI (Styling)
+- JWT Auth
+- React Router
+- React Helmet (SEO)
+- Optional: Cloudinary/S3 for image upload
+
+🔁 Optional Features:
+- Pagination & Infinite Scroll
+- Google Maps Embed on project detail page
+- WhatsApp click-to-chat on each property
+- Blog module for SEO
+
+Please make sure the site is:
+- **Mobile-first** (responsive UI)
+- **SEO-optimized**
+- **Fast-loading**
+- Works well on Replit (local uploads or mock data accepted)
+
+Output folder structure:
+- `/client` – React frontend
+- `/server` – Express backend
+- `.env.example` for API keys and Mongo URI
+
+Initialize project with `npm run dev` (concurrently runs both client and server).
+
